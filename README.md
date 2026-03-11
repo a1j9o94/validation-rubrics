@@ -36,8 +36,9 @@ rubrics/
 2. A **validator agent** gets this repo's rubric injected into its context
 3. The builder **never sees** the rubric — structural separation, not just policy
 4. Validator runs `checks.md` first (fast, deterministic)
-5. If checks pass, validator applies `rubric.md` (judgment-based, scored)
-6. If validation fails, feedback follows a tiered model:
+5. **If ANY check fails, overall result is FAIL.** This is a hard gate — rubric scores cannot override it. Rubric may still run for diagnostics, but the work product does not pass.
+6. If all checks pass, validator applies `rubric.md` (judgment-based, scored)
+7. If validation fails, feedback follows a tiered model:
    - **Tier 1:** Category only ("balance sheet section failed")
    - **Tier 2:** Behavioral description ("model produces incorrect totals for months with seasonal adjustments")
    - **Tier 3:** Counter-example without assertion (show the failing input but not the expected output)

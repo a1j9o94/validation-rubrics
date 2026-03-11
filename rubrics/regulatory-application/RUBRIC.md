@@ -2,6 +2,8 @@
 
 > **HOLDOUT**: This file must NEVER be shown to the builder agent. It is injected into the validator's context only.
 
+> **GATE RULE**: Before scoring this rubric, you MUST have run checks.md. If ANY check in checks.md failed, the overall result is **FAIL** regardless of rubric scores. You may still score dimensions for diagnostic purposes, but clearly mark the overall assessment as FAIL due to checks failure.
+
 Score each dimension 1-5. A passing work plan scores ≥ 3 on every dimension and ≥ 3.5 average.
 
 ## 1. Research Depth (1-5)

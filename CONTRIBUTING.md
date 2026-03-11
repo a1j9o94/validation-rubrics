@@ -13,11 +13,12 @@
 - Prerequisites (what the builder should have been asked to produce)
 - Related rubrics
 
-**`checks.md`** — Automated Checks
+**`checks.md`** — Automated Checks (HARD GATE)
 - Deterministic, binary pass/fail criteria
 - Should be evaluable programmatically where possible
 - Format: checklist with clear conditions
-- These run FIRST — if checks fail, rubric evaluation is skipped
+- **These are a hard gate: if ANY check fails, the overall result is FAIL regardless of rubric scores.** Rubric evaluation may still run for diagnostic purposes, but cannot override a checks failure.
+- The validation report must clearly state FAIL if any check failed, even if rubric scores are high
 
 **`rubric.md`** — Judgment Criteria (HOLDOUT)
 - This file is NEVER shown to the builder agent
