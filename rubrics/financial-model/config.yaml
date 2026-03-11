@@ -1,0 +1,20 @@
+name: financial-model
+version: 1.0.0
+risk_tier: 2
+domain:
+  - finance
+  - startup
+  - investor-relations
+  - planning
+checks_executable: false
+rubric_model_preference: different
+min_validator_capability: high
+dimensions:
+  - assumption-quality
+  - scenario-robustness
+  - operational-realism
+  - cash-flow-awareness
+  - decision-utility
+pass_threshold:
+  min_per_dimension: 3
+  min_average: 3.5
