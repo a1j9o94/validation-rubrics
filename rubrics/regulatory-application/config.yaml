@@ -1,0 +1,21 @@
+name: regulatory-application
+version: 1.0.0
+risk_tier: 3
+domain:
+  - regulatory
+  - legal
+  - cannabis
+  - licensing
+  - compliance
+checks_executable: false
+rubric_model_preference: different
+min_validator_capability: high
+dimensions:
+  - research-depth
+  - completeness-of-requirements
+  - timeline-realism
+  - cost-accuracy
+  - actionability
+pass_threshold:
+  min_per_dimension: 3
+  min_average: 3.5
